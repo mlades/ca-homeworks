@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <!-- Title Page-->
+    <title>Homework 14-03</title>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <!-- Your custom CSS styles -->
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+    
+                        <!-- form card login -->
+                        <div class="card rounded ">
+                           
+                            <div class="card-body">
+                                <form class="form" >
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="first_name">User</label>
+                                        <select class="col-lg-5 col-md-5 form-control form-control-lg" id="user">
+                                            <option value="">Choose... </option>
+                                            <option value="john">John</option>
+                                            <option value="rob">Rob</option>
+                                            <option value="jane">Jane</option>                                            
+                                        </select>  
+                                        <div class="col-lg-4 col-md-4 pl-1">                                            
+                                            <button type="button" class="btn btn-primary btn-lg " id="btnLoad">Load Data</button>
+                                        </div>               
+                                    </div>
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="first_name">First Name</label>
+                                        <input type="text" class="col-lg-9 col-md-9 form-control form-control-lg" name="first_name" id="first_name">                
+                                    </div>
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="last_name">Last Name</label>
+                                        <input type="text" class="col-lg-9 col-md-9 form-control form-control-lg" name="last_name" id="last_name">                
+                                    </div>                                    
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="web_site">Website</label>
+                                        <input type="text" class="col-lg-9 col-md-9 form-control form-control-lg" name="web_site" id="web_site">                
+                                    </div>
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="company">Phone</label>
+                                        <input type="text" class="col-lg-9 col-md-9 form-control form-control-lg" name="phone" id="phone">                
+                                    </div>
+                                    <div class="form-group d-flex flex-row  align-items-center ">
+                                        <label class="col-lg-3 col-md-3 pr-1" for="email">Email</label>
+                                        <input type="email" class="col-lg-9 col-md-9 form-control form-control-lg" name="email" id="email">                
+                                    </div>
+                                      
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var john = {
+            user: 'John',
+            firstName: 'John',
+            lastName: 'Smith',
+            website: 'https://www.john.com',
+            phone: '111-111-111',
+            email: 'john@gmail.com'           
+    };
+
+    var rob = {
+        user: 'Rob',
+        firstName: 'Rob',
+        lastName: 'Robinson',
+        website: 'https://www.rob.com',
+        phone: '222-222-222',
+        email: 'rob@gmail.com'           
+    };
+
+    var jane = {
+        user: 'Jane',
+        firstName: 'Jane',
+        lastName: 'Smith',
+        website: 'https://www.jane.com',
+        phone: '333-333-333',
+        email: 'jane@gmail.com'           
+    };
+
+    var clickButton = document.getElementById("btnLoad");      
+    var inputs = document.getElementsByTagName("input");    
+    clickButton.addEventListener("click", clickMe);
+    var users=[john, rob, jane]; 
+    
+    function clickMe() {  
+        var userName = document.getElementById('user').value;
+        var userIndex = document.getElementById("user").selectedIndex;
+        
+        if (userName == "") {
+            for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].value = "";
+                }            
+        } else {
+            inputs[0].value = users[userIndex-1].firstName;
+            inputs[1].value = users[userIndex-1].lastName;
+            inputs[2].value = users[userIndex-1].website;
+            inputs[3].value = users[userIndex-1].phone;
+            inputs[4].value = users[userIndex-1].email;            
+        } 
+    }
+    
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+<script>
+// Here bootstrap JQUERY, if you dont know what is this, you dont need it.
+</script>
+   
+
+</body>
+
+</html>

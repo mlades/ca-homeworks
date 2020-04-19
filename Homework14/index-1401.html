@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Page title -->
+    <title>Homework-14_01</title>
+</head>
+
+<body>
+	
+	<script>
+		
+        var mark = {
+            fullName: 'Mark',
+            mass: 90,
+            height: 1.85,
+            bmi: function () {
+               return this.mass / (this.height*this.height)
+            }
+        };
+
+        var john = {
+            fullName: 'John',
+            mass: 90,
+            height: 1.75,
+            bmi: function () {
+               return this.mass / (this.height * this.height)
+            }
+        };
+
+        console.log(mark.bmi());
+        console.log(john.bmi());
+
+        if (mark.bmi()>john.bmi()) {
+            console.log(mark.fullName + " has biggest BMI: " + mark.bmi());
+        } else if (john.bmi()>mark.bmi()) {
+            console.log(john.fullName + " has biggest BMI: " + john.bmi());
+        } else {
+            console.log("They both have the same BMI: " + mark.bmi() )
+        }
+
+        
+	</script>
+</body>
+
+</html>

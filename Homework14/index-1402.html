@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Page title -->
+    <title>Homework-14_02</title>
+</head>
+
+<body>
+	
+	<script>
+		
+        var john = {
+            fullName: 'John',
+            bills: [124, 48, 268,180, 42], 
+            tips: [],
+            totapPaids: [],
+            calcTips: function () {
+                for (var i=0; i < this.bills.length; i++){
+                    if (this.bills[i] < 50) {
+                        this.tips[i] = this.bills[i]*0.2;
+                        this.totapPaids[i] = this.tips[i] + this. bills[i];
+                    } else if (this.bills[i] >= 50 && this.bills[i] <= 200) {
+                        this.tips[i] = this.bills[i]*0.15;
+                        this.totapPaids[i] = this.tips[i] + this.bills[i];
+                    } else {
+                        this.tips[i] = this.bills[i]*0.1;
+                        this.totapPaids[i] = this.tips[i] + this. bills[i];
+                    }
+                }
+                
+            }
+        };
+
+        john.calcTips();
+        console.log(john.bills);
+        console.log(john.tips);
+        console.log(john.totapPaids);
+
+
+        var mark = {
+            fullName: 'Mark',
+            bills: [77, 375, 110, 45], 
+            tips: [],
+            totapPaids: [],
+            calcTips: function () {
+                for (var i=0; i < this.bills.length; i++){
+                    if (this.bills[i] < 100) {
+                        this.tips[i] = this.bills[i]*0.2;
+                        this.totapPaids[i] = this.tips[i] + this. bills[i];
+                    } else if (this.bills[i] >= 100 && this.bills[i] <= 300) {
+                        this.tips[i] = this.bills[i]*0.1;
+                        this.totapPaids[i] = this.tips[i] + this.bills[i];
+                    } else {
+                        this.tips[i] = this.bills[i]*0.25;
+                        this.totapPaids[i] = this.tips[i] + this. bills[i];
+                    }
+                }
+                
+            }
+        };
+
+        mark.calcTips();
+        console.log(mark.bills);
+        console.log(mark.tips);
+        console.log(mark.totapPaids);
+
+        function avgTips (tips){
+            var sum=0;
+            for (var i=0; i<tips.length; i++){
+                sum += tips[i];
+            }
+            return sum / tips.length;
+        }
+
+        console.log("John average tips is " + avgTips(john.tips));
+        console.log("Mark average tips is " + avgTips(mark.tips));
+
+        if (avgTips(john.tips) > avgTips(mark.tips)) {
+            console.log(john.fullName + "'s family paid more thips") ;
+        } else if (avgTips(mark.tips) > avgTips(john.tips)) {
+            console.log(mark.fullName + "'s family paid more thips") ;
+        } else {
+            console.log("Both families paid the same tips")
+        }
+	</script>
+</body>
+
+</html>
