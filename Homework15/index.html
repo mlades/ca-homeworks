@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Page title -->
+    <title>Homework-15_01</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My shoping list</h1>
+        <span>Enter a new item:</span><input type="text" id="input"><button type="button" id="button">Add item</button>
+        </h1>
+        <div>
+            <ul class="items">
+
+            </ul>
+        </div>
+    </div>
+	
+	<script>       
+        var items = document.querySelector(".items");
+        var firstName = document.getElementById("input");
+        var addButton = document.getElementById("button");
+
+        addButton.addEventListener("click", addInput);
+
+
+        function addInput() {
+            var item = document.createElement('li');
+            var deleteButton = document.createElement('button');
+            var span = document.createElement('span');
+
+            deleteButton.setAttribute('type', "button");
+            deleteButton.textContent = "Delete";
+            deleteButton.className="deleteButton"
+            deleteButton.style.borderRadius="3px"; 
+            deleteButton.style.margin="5px";           
+            deleteButton.addEventListener("click", deleteInput);
+
+            span.textContent=input.value;            
+            
+            item.appendChild(span);
+            item.appendChild(deleteButton);
+
+            items.appendChild(item);           
+        }    
+        
+        function deleteInput(){
+            items.removeChild(this.parentNode);
+        }         
+        
+	</script>
+</body>
+
+</html>
