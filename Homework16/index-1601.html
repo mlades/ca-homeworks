@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Page title -->
+    <title>Homework-16_01</title>
+</head>
+
+<body>
+    <div class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col mx-auto text-center">
+                    <h1 class="border-bottom bg-muted">Form</h1>
+                    <div >
+                        <form class="justify-content-center mx-auto w-25 pb-5">
+                            
+                            <div class="form-group">
+                                <select class="form-control"  >
+                                    <option id="default" value="default">Select class</option>
+                                    <option id="primary" value="primary">Primary</option>
+                                    <option id="secondary" value="secondary">Secondary</option>
+                                    <option id="success" value="success">Success</option>
+                                    <option id="danger" value="danger">Danger</option>
+                                    <option id="warning" value="warning">Warning</option>
+                                    <option id="info" value="info">Info</option>
+                                    <option id="dark" value="dark">Dark</option>
+                                  </select>
+                            </div>
+                            <button type="button" class="btn btn-block btn-primary">Primary</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<script>       
+        var select = document.querySelector("select"); 
+        var button = document.querySelector("button");
+
+        
+        select.addEventListener('change', userSelect);    
+        //Za ekstra delot         
+        //button.addEventListener('click', userButton);
+
+        function userSelect() {
+            var userSelectedData = this.value;
+            
+            if (userSelectedData === "primary") {
+                button.className="btn btn-block btn-primary";
+                button.textContent = 'Primary';
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "secondary") {
+                button.className="btn btn-block btn-secondary";
+                button.textContent = "Secondary";
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "success") {
+                button.className="btn btn-block btn-success";
+                button.textContent = "Success";
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "danger") {
+                button.className="btn btn-block btn-danger";
+                button.textContent = "Danger";
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "warning") {
+                button.className="btn btn-block btn-warning";
+                button.textContent = "Warning";
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "info") {
+                button.className="btn btn-block btn-info";
+                button.textContent = "Info";
+                button.disabled = false;
+                console.log(button);
+            } else if (userSelectedData === "dark") {
+                button.className="btn btn-block btn-dark";
+                button.textContent = "Dark";
+                button.disabled = false;
+                console.log(button);
+            }  else {
+                button.disabled = true;
+                console.log(button);
+            }            
+        }
+
+        function userButton() {
+            var userSelectedData = select.value;
+            
+            if (userSelectedData === "primary") {
+                button.className="btn btn-block btn-primary";
+                button.textContent = 'Primary';              
+            } else if (userSelectedData === "secondary") {
+                button.className="btn btn-block btn-secondary";
+                button.textContent = "Secondary";               
+            } else if (userSelectedData === "success") {
+                button.className="btn btn-block btn-success";
+                button.textContent = "Success";              
+            } else if (userSelectedData === "danger") {
+                button.className="btn btn-block btn-danger";
+                button.textContent = "Danger";              
+            } else if (userSelectedData === "warning") {
+                button.className="btn btn-block btn-warning";
+                button.textContent = "Warning";                
+            } else if (userSelectedData === "info") {
+                button.className="btn btn-block btn-info";
+                button.textContent = "Info";              
+            } else if (userSelectedData === "dark") {
+                button.className="btn btn-block btn-dark";
+                button.textContent = "Dark";                
+            }          
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
