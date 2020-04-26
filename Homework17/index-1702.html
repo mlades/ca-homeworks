@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!-- Page title -->
+    <title>Homework-17_02</title>
+</head>
+
+<body>
+    <div class="bg-light">
+        <div class="container">
+            <h1 class="border-bottom bg-muted text-center">Favorite fruits</h1>
+        
+            <div class="form-group col-md-4 offset-md-4">
+                
+                <p>Please type your favorite fruits separated by</p>
+                <input type="text" class="form-control">
+                <p class = "m-0">You can type in fruits only from this list:</p>
+                <small>apples, pears, oranges, pineapples, kiwis, bananas, berries, watermelons, lemons</small>
+                <button type="button" class="btn btn-block btn-primary mb-2">Add fruits</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>   
+
+        var container = document.querySelector(".container");
+        var input = document.querySelector("input"); 
+        var button = document.querySelector("button");
+        var fruits = ["apples", "pears", "oranges", "pineapples", "kiwis", "bananas", "berries", "watermelons", "lemons"];
+        var userInputs= [];
+        
+
+        button.addEventListener('click', validateInput);
+
+        function validateInput() {   
+            var count = 0;
+            var correctInputs= [];
+            var inputClass="form-control ";
+           
+           
+            userInputs=input.value.split(", ");            
+          
+            for (var x=0; x < userInputs.length; x++) { 
+                if (input.value===""){
+                    alert("Please enter your favorite fruits");
+                } else if (fruits.indexOf(userInputs[x]) >-1) {
+                    count ++;  
+                    correctInputs.push(userInputs[x]);                  
+                } else {
+                    alert(userInputs[x] + " is not valid fruit") ;     
+                }                
+            }     
+            
+            if (count === userInputs.length) {               
+                input.className = inputClass + "is-valid";
+            } else {
+                input.className = inputClass + "is-invalid";
+            }
+
+            for (y=0; y < correctInputs.length; y++) {
+                var div = document.createElement("div");
+                var p = document.createElement("p");
+                var button = document.createElement("button");
+
+                div.className="bg-white border p-1";
+
+                p.textContent=correctInputs[y];
+                p.className="d-inline-block align-middle";
+
+                button.textContent="Delete";
+                button.className="btn bg-danger text-white float-right ";
+                button.style.borderRadius="3px"; 
+                button.addEventListener("click", deleteFruit);
+
+                div.appendChild(p);
+                div.appendChild(button);
+
+                container.appendChild(div);
+            }
+
+
+        }  
+
+        function deleteFruit() {
+            this.parentElement.remove();
+        }
+        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
