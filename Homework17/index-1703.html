@@ -28,15 +28,25 @@
         button.addEventListener('click', convertText);
 
         function convertText() {   
-            var userInputs=input.value.split(" ");   
+            var userInputs = input.value.split(" ");  
+            var modifiedInputs = []; 
+            var separatedWords = "";
             var convertedText = "";
+            
 
             for (var x=0; x < userInputs.length; x++) { 
                 if (input.value===""){
                     alert("Please enter your text");
                 } else  {                    
-                    convertedText += userInputs[x].charAt(0).toUpperCase() + userInputs[x].slice(1).toLowerCase() +" ";               
+                    modifiedInputs[x] =  userInputs[x].replace(/([A-Z]+)/g, " $1") ;             
                 }               
+            }
+
+            separatedWords = modifiedInputs.toString().split(" ").toString().split(",");
+            
+            for (var x=0; x < separatedWords.length; x++) { 
+                convertedText += separatedWords[x].charAt(0).toUpperCase() + separatedWords[x].slice(1).toLowerCase() +" ";               
+           
             }
             
             var p = document.createElement("p");
