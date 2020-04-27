@@ -15,7 +15,7 @@
         
             <div class="form-group col-md-4 offset-md-4">
                 
-                <p>Please type your favorite fruits separated by</p>
+                <p>Please type your favorite fruits separated by comma:</p>
                 <input type="text" class="form-control">
                 <p class = "m-0">You can type in fruits only from this list:</p>
                 <small>apples, pears, oranges, pineapples, kiwis, bananas, berries, watermelons, lemons</small>
@@ -42,12 +42,12 @@
             var inputClass="form-control ";
            
            
-            userInputs=input.value.split(", ");            
+            userInputs=input.value.split(",");            
           
             for (var x=0; x < userInputs.length; x++) { 
                 if (input.value===""){
                     alert("Please enter your favorite fruits");
-                } else if (fruits.indexOf(userInputs[x]) >-1) {
+                } else if (fruits.indexOf(userInputs[x].trim()) >-1) {
                     count ++;  
                     correctInputs.push(userInputs[x]);                  
                 } else {
