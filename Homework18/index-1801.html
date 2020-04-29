@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Page title -->
+    <title>Homework-18_01</title>
+</head>
+
+<body>
+    
+    
+    <script>   
+        //function currentDate(separator)
+        function currentDate(separator) {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = (today.getMonth()) < 9 ? '0' + (today.getMonth() + 1) : today.getMonth() + 1;
+            var yy = today.getFullYear();
+
+            if (!separator) {
+                return  dd + "/" + mm + "/" + yy;
+            } else {
+                return dd + separator + mm + separator + yy;
+            } 
+        }
+        console.log(currentDate('-')); 
+        console.log(currentDate()); 
+        console.log(currentDate('|'));
+
+        //function getDaysInMonth()
+        function getDaysInMonth(month, year) {
+            var daysInMonth = {
+                1:31,
+                2:28,
+                3:31,
+                4:30,
+                5:31,
+                6:30,
+                7:31,
+                8:31,
+                9:30,
+                10:31,
+                11:30,
+                12:31 
+            }
+            var daysInMonthLeap = {
+                1:31,
+                2:29,
+                3:31,
+                4:30,
+                5:31,
+                6:30,
+                7:31,
+                8:31,
+                9:30,
+                10:31,
+                11:30,
+                12:31  
+            }            
+            if (!(year % 4)) {
+                return daysInMonthLeap[month];
+            } else {
+                return daysInMonth[month];
+            }
+        }
+        console.log(getDaysInMonth(2, 2024)); 
+
+        //function month_name()
+        function month_name(date) {
+            
+            var monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+
+            return monthNames[date.getMonth()];
+
+        }
+        console.log(month_name(new Date("06/11/2020"))); 
+
+        //function isWeekend() 
+        function isWeekend(date) {
+            var date = new Date(date);
+            
+            if (date.getDay() === 0 || date.getDay() === 6){
+                return "Is Weekend";
+            } else {
+                return "Sorry, but it is not Weekend";
+            }
+          
+        } 
+        console.log(isWeekend('May 04, 2020')); 
+
+        //function date_diff_indays() function to get difference between two dates in days.
+        function date_diff_indays(firstDate, secondDate) {
+            var firDate = new Date(firstDate);
+            var secDate = new Date(secondDate); 
+
+            return Math.floor((Math.abs(firDate.getTime() - secDate.getTime())) / 1000 / 60 / 60 / 24) + " days";           
+
+        }
+        console.log(date_diff_indays('04/02/2014', '11/04/2014')); 
+        
+        //function lastday() to get the last day of a month.
+        function lastday(year, month) {
+            var daysInMonth = {
+                1:31,
+                2:28,
+                3:31,
+                4:30,
+                5:31,
+                6:30,
+                7:31,
+                8:31,
+                9:30,
+                10:31,
+                11:30,
+                12:31 
+            }
+            var daysInMonthLeap = {
+                1:31,
+                2:29,
+                3:31,
+                4:30,
+                5:31,
+                6:30,
+                7:31,
+                8:31,
+                9:30,
+                10:31,
+                11:30,
+                12:31  
+            }
+            if (!(year % 4)) {
+                return daysInMonthLeap[month];
+            } else {
+                return daysInMonth[month];
+            }
+
+        }
+
+        console.log(lastday(2014,11)); 
+
+        //function to get the maximum date from an array of dates.
+        var dates = ["1/1/2020", "10/4/2020", "7/5/2022", "1/6/2020", "31/8/2020", "9/9/2020", "12/12/2021", "15/10/2019"];
+        function maxDate(dates) {
+           
+            var maxDate = [];
+            var temp = new Date(0);
+
+            for (var i=0; i< dates.length; i++){
+                var time = new Date (dates[i]);
+                if (time.getTime() > temp.getTime()) {
+                    temp = time;
+                    maxDate[0] = dates[i];
+                }
+            }
+            return maxDate.toString() ;
+        }        
+        console.log(maxDate(dates)); 
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

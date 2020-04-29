@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!-- Page title -->
+    <title>Homework-18_02</title>
+    <style>
+        .image {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80");
+            padding-bottom: 50%;
+            background-size: cover;
+            background-position: center ;
+            height: 800px;
+        }
+        .section {
+            padding-top: 150px;
+        }
+        .nextYear {
+            padding-top: 100px;
+            opacity: 0.4;
+            font-size: 200px;
+        }
+        #loading {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(192, 192, 192, 0.5);
+            background-image: url("loading.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image text-white">
+
+       <div class="section">
+            <h1 class="col-md-6 offset-md-3 text-center font-weight-bold display-4"></h1>
+
+            <div class="row">
+                <div class="row no-gutters d-flex mx-auto text-white" >
+                    <div class="text-center p-4">
+                        <strong class="days display-4 font-weight-bold"></strong>
+                        <p></p>
+                    </div>
+                    <div class="text-center p-4">
+                        <strong class="hours display-4 font-weight-bold"></strong>
+                        <p></p>
+                    </div>
+                    <div class="text-center p-4">
+                        <strong class="minutes display-4 font-weight-bold"></strong>
+                        <p></p>
+                    </div>
+                    <div class="text-center p-4" >
+                        <strong class="seconds display-4 font-weight-bold"></strong>
+                        <p></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+            
+        <div class="nextYear col-md-6 offset-md-3 text-center"></div>
+    </div>
+    <div id="loading"></div>
+    
+    <script>   
+        var h1 = document.querySelector("h1");
+        var paragraphs = document.querySelectorAll("p");
+        var nextYear = document.querySelector(".nextYear")
+        var dayToNY = document.querySelector(".days");
+        var hoursToNY = document.querySelector(".hours");
+        var minutesToNY = document.querySelector(".minutes");
+        var secondsToNY = document.querySelector(".seconds");
+        var currentYear = new Date().getFullYear();
+        
+        var nextNewYear = new Date('January 01 ' + (currentYear + 1) + ' 00:00:00');        
+
+        function getDaysBeforeNewYear() {
+            
+            var currentTime = new Date();
+            var diff = nextNewYear - currentTime; // difference in milliseconds
+            var days = Math.floor(diff / 1000 / 60 / 60 / 24);
+            var hours = Math.floor((diff - (days*86400000)) / 1000 / 60 / 60 );
+            var minutes = Math.floor((diff - (days*86400000) - (hours*3600000)) / 1000 / 60);
+            var seconds = Math.floor((diff - (days*86400000) - (hours*3600000) - (minutes*60000)) / 1000 );
+            h1.textContent = "New Year Countdown";
+            paragraphs[0].textContent = "Days";
+            paragraphs[1].textContent = "Hours";
+            paragraphs[2].textContent = "Minutes";
+            paragraphs[3].textContent = "Seconds";
+            dayToNY.textContent = days < 10 ? '0' + days : days;
+            hoursToNY.textContent = hours < 10 ? '0' + hours : hours;
+            minutesToNY.textContent = minutes < 10 ? '0' + minutes : minutes;
+            secondsToNY.textContent = seconds < 10 ? '0' + seconds : seconds;
+            nextYear.textContent = nextNewYear.getFullYear();
+
+            
+        }
+        const calculate = setInterval(getDaysBeforeNewYear, 1000);
+       
+        
+        
+    </script>
+    <script>
+     
+     function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+onReady(function() {
+  setVisible('.image', true);
+  setVisible('#loading', false);
+});
+      </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
