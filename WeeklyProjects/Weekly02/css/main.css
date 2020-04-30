@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+#home button:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+#home {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/home.jpg");
+}
+
+.image {
+  padding-bottom: 20%;
+  background-size: cover;
+  background-position: center ;
+}
+
+#home .fa,
+#create .fa{
+  color: #0275d8;
+  background:#fff;
+  padding:  5px;
+  border-radius:5px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px; 
+}
+
+#explore .fa,
+#share .fa{
+  color: #fff;
+  background:#000;
+  padding:  5px;
+  border-radius:5px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px; 
+}
+
+#create button:hover,
+#share button:hover {
+  background-color: white;
+  color: black;
+}
+.explore_image {
+  background-image: url("../img/explore-section1.jpg");
+  background-size: cover;
+  background-position: center ;
+}
+
+.create_image {
+  background-image: url("../img/create-section1.jpg");
+  background-size: cover;
+  background-position: center ;
+}
+
+.share_image {
+  background-image: url("../img/share-section1.jpg");
+  background-size: cover;
+  background-position: center ;
+}
+
