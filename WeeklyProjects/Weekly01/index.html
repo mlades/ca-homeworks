@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    
+    <!-- Your custom CSS styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Page title -->
+    <title>My portfolio</title>
+    <style>
+      
+      </style>
+</head>
+
+<body>
+    <!-- START HERE YOUR BOOTSTRAP HTML CODE -->
+   
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-sm-3 m-0 p-0 ">
+                <div class="image"></div>
+            </div>
+            <div class="col-sm-9 p-0 ">
+                <div class="row no-gutters d-flex flex-row justify-content-between align-items-center bg-secondary text-white p-4 social_icon">
+                  <div class ="display-4">Sasho Mladenovski</div>
+                  <a href="#" class="fab fa-facebook"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+                </div>
+                <div class="row no-gutters d-flex justify-content-between bg-dark text-white p-4">
+                    <div class ="display-5">Experienced Full Stack Web Developer</div>
+                </div>
+                <div class="row no-gutters d-flex m-0" >
+                    <div class="card-body bg-primary text-center" type="button" data-toggle="collapse" data-target="#collapseHome" aria-expanded="false" aria-controls="collapseHome">
+                        <div class="fa fa-home"></div>
+                        <span class="text-white d-none d-md-block">Home</span>
+                    </div>
+                    <div class="card-body bg-success text-center" type="button" data-toggle="collapse" data-target="#collapseResume" aria-expanded="false" aria-controls="collapseResume" >
+                        <div class="fa fa-graduation-cap"></div>
+                        <span class="text-white d-none d-md-block">Resume</span>
+                    </div>
+                    <div class="card-body bg-warning text-center" type="button" data-toggle="collapse" data-target="#collapseWork" aria-expanded="false" aria-controls="collapseWork">
+                        <div class="fa fa-folder-open"></div>
+                        <span class="text-white d-none d-md-block">Work</span>
+                    </div>
+                    <div class="card-body bg-danger text-center" type="button" data-toggle="collapse" data-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+                        <div class="fa fa-envelope"></div>
+                        <span class="text-white d-none d-md-block">Contact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="myGroup">
+                <div class="container collapse" id="collapseHome" aria-labelledby="collapseHome" data-parent="#myGroup">
+                    <div class="bg-primary text-white p-4 border border-primary rounded">
+                        <h2>Welcome to my page</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit blanditiis corporis excepturi vel, optio in quo dolorum quisquam odio ab sequi eum quod alias. Ad accusamus laudantium quos nesciunt.</p>
+                    </div>
+                    <div class="p-4 border border-muted rounded">
+                        <h3>My Skills</h3>
+                        <p class="border-bottom border-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores adipisci, modi iste cum, dolore dignissimos nobis odit veniam culpa dicta rem qui provident mollitia? Quos commodi officiis deleniti distinctio sunt.</p>
+                        <h4>HTML</h4> 
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                        </div>
+                        <h4>CSS 3</h4> 
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                        </div>
+                        <h4>Java Script</h4> 
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+                        </div>
+                        <h4>PHP</h4> 
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container collapse " id="collapseResume" aria-labelledby="collapseResume" data-parent="#myGroup">
+                    <div class="bg-success text-white p-4 border border-success rounded">
+                        <h2>My Resume</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit blanditiis corporis excepturi vel, optio in quo dolorum quisquam odio ab sequi eum quod alias. Ad accusamus laudantium quos nesciunt.</p>
+                    </div>
+                    <div class=" p-4 border border-muted rounded">
+                        <h3>Where Have I Worked?</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores adipisci, modi iste cum, dolore dignissimos nobis odit veniam culpa dicta rem qui provident mollitia? Quos commodi officiis deleniti distinctio sunt.</p>
+                        <div class="row ">
+                          <div class="col mb-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Devmasters</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iste ipsam quisquam. Facere beatae alias cupiditate quasi dolore, repudiandae vitae, quibusdam soluta rerum vero, sapiente sed ab magni. Eius, eveniet.</p>
+                                <div class="bg-dark text-white mb-1 p-2">Position: Full Stack Developer</div>
+                                <div class="bg-dark text-white mb-1 p-2">Phone: (444) 444-4444</div>                       
+                              </div>
+                              <div class="card-footer">
+                                  <small class="text-muted">Dates: 2015 - 2018</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col mb-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">123 Designs</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, aliquid dolorum eos nisi laborum repellat eum suscipit alias molestiae mollitia reiciendis soluta veniam. Facilis neque consequatur a quidem exercitationem suscipit.</p>
+                                <div class="bg-dark text-white mb-1 p-2">Position: Full Stack Developer</div>
+                                <div class="bg-dark text-white mb-1 p-2">Phone: (444) 444-4444</div>   
+                              </div>
+                              <div class="card-footer">
+                                  <small class="text-muted">Dates: 2013 - 2015</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col mb-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Web Designer Pros</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestiae odit alias illo distinctio. Sapiente illo aliquam eos nesciunt molestias qui! Nemo earum esse reiciendis odio consequuntur optio quia accusantium.</p>
+                                <div class="bg-dark text-white mb-1 p-2">Position: Full Stack Developer</div>
+                                <div class="bg-dark text-white mb-1 p-2">Phone: (444) 444-4444</div>   
+                              </div>
+                              <div class="card-footer">
+                                  <small class="text-muted">Dates: 2010 - 2013</small>
+                              </div>
+                            </div>
+                          </div>
+                      
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container collapse " id="collapseWork" aria-labelledby="collapseWork" data-parent="#myGroup">
+                    <div class="bg-warning text-white p-4 border border-warning rounded">
+                        <h2>My work</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit blanditiis corporis excepturi vel, optio in quo dolorum quisquam odio ab sequi eum quod alias. Ad accusamus laudantium quos nesciunt.</p>
+                    </div>
+                    <div class="p-4 border border-muted rounded">
+                        <h3>What Have I Build?</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores adipisci, modi iste cum, dolore dignissimos nobis odit veniam culpa dicta rem qui provident mollitia? Quos commodi officiis deleniti distinctio sunt.</p>
+                        <div class="row p-0">
+                            <div class="col-sm-3 p-0 imgOne">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgTwo">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgThree">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgFour">
+                                <div class="imgMyWork"></div>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-sm-3 p-0 imgFive">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgSix">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgSeven">
+                                <div class="imgMyWork"></div>
+                            </div>
+                            <div class="col-sm-3 p-0 imgEight">
+                                <div class="imgMyWork"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container collapse " id="collapseContact" aria-labelledby="collapseContact" data-parent="#myGroup">
+                    <div class="bg-danger text-white p-4 border border-danger rounded">
+                        <h2>Contact</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit blanditiis corporis excepturi vel, optio in quo dolorum quisquam odio ab sequi eum quod alias. Ad accusamus laudantium quos nesciunt.</p>
+                    </div>
+                    <div class=" p-4 border border-muted rounded">
+                        <h3>Get In Touch</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores adipisci, modi iste cum, dolore dignissimos nobis odit veniam culpa dicta rem qui provident mollitia? Quos commodi officiis deleniti distinctio sunt.</p>
+                        <form>
+                            <div class="p-3">
+                                <div class="form-group" >
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend ">
+                                            <div class="input-group-text bg-danger"><i class="contakt_fa fas fa-user text-white"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control bg-dark text-muted" id="name" name="name" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend ">
+                                            <div class="input-group-text bg-danger"><i class="contakt_fa fas fa-envelope text-white"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control bg-dark text-muted" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                             <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend ">
+                                            <div class="input-group-text bg-danger"><i class="contakt_fa fas fa-pencil-alt text-white"></i></div>
+                                        </div>
+                                        <textarea class="form-control bg-dark text-muted" placeholder="Name" required></textarea>
+                                    </div>
+                                </div>
+                             <div class="text-center ">
+                                    <input type="submit" value="Submit" class="btn btn-info btn-block bg-danger  py-2">
+                                </div>
+                            </div>                        
+                        </form>               
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 bg-secondary"><button class="btn m-5 border border-white text-white"><i class="fa fa-download"></i> Download Resume</button></div>
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- END HTML CODE-->
+    <!-- Bootstrap scripts, do not remove -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        // Here bootstrap JQUERY, if you dont know what is this, you dont need it.
+    </script>
+</body>
+
+</html>

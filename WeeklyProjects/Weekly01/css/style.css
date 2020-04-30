@@ -1,0 +1,97 @@
+body {
+  width: 70%;
+  margin: auto;
+}
+
+.image {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../img/me.jpg");
+  width: 100%;
+  height: 100%;
+}
+
+.imgMyWork{
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center center;    
+}
+
+.social_icon a:hover{
+  color: white!important;
+  text-decoration: none;
+}
+
+.imgOne .imgMyWork  {
+  background-image: url("../img/my_work1.jpg");
+}
+
+.imgTwo .imgMyWork  {
+  background-image: url("../img/my_work2.jpg");
+}
+
+.imgThree .imgMyWork  {
+  background-image: url("../img/my_work3.jpg");
+}
+
+.imgFour .imgMyWork  {
+  background-image: url("../img/my_work4.jpg");
+}
+
+.imgFive .imgMyWork {
+  background-image: url("../img/my_work5.jpg");
+}
+
+.imgSix .imgMyWork {
+  background-image: url("../img/my_work6.jpg");
+}
+
+.imgSeven .imgMyWork {
+  background-image: url("../img/my_work7.jpg");
+}
+
+.imgEight .imgMyWork {
+  background-image: url("../img/my_work8.jpg");
+}
+  .fa-facebook {
+    color: white;
+  }
+
+  .fa-linkedin {
+    color: white;
+  } 
+  
+  .fa-instagram {
+    color: white;
+  }
+
+  .fa-home {
+    color: white;
+    font-size: 40px;
+  } 
+
+  .fa-graduation-cap {
+    color: white;
+    font-size: 40px;
+  }
+
+  .fa-folder-open {
+    color: white;
+    font-size: 40px;
+  }
+
+  .fa-envelope {
+    color: white;
+    font-size: 40px;
+  } 
+
+  .card-body:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+ .contakt_fa {
+    width: 25px;
+    font-size: 20px !important;
+  }
