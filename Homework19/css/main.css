@@ -1,0 +1,22 @@
+
+
+.background {
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7) ), url("https://upload.wikimedia.org/wikipedia/en/c/c4/Super_Hero_Squad_Show.jpg");
+}
+
+.image {
+  padding-bottom: 7%;
+  background-size: cover;
+  background-position: center ; 
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card {
+  width: 30%;
+}
+.zeroMargin {
+  margin: 0px!important;
+}
