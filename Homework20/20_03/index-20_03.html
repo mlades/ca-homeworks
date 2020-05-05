@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Page title -->
+ 
+    <title>Homework-20_03</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+    <h1 class="text-white text-center pt-5">My blog</h1>
+    <input class="input-group w-50 p-2 mb-5 mx-auto" type="text" placeholder="Filter posts..." name="filter">
+
+    <div class="container text-white ">
+    </div>
+
+    <div class="loader" >
+        <div class="row">
+            <div class="col-md-4  offset-md-4 bg">
+                <div class="text-center" >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var url = "https://jsonplaceholder.typicode.com/posts";  
+        var container = document.querySelector(".container");
+        var divLoader = document.querySelector(".loader");
+        var counter = 0;
+        const getFirstData = showData(5);
+        var getData;
+     
+        var input = document.querySelector("input");
+
+        
+
+        $(window).scroll(function () {   
+            if ($(document).height() - $(this).height() == $(this).scrollTop()) {
+               
+                getData = setInterval(showData, 3000, 10);
+                
+            }
+        });
+
+        function showData(number) {
+            clearInterval(getData);
+            fetch(url).then(response => {
+                return response.json();
+            }).then(data => {
+                var divData = "";
+                if (counter < data.length) {
+                    var length = (counter + number) > 100 ? 100 : (counter + number); 
+                    for ( var i=counter; i < length; i++ ) {
+                 
+                        counter ++;
+                        divData += `
+                        <div class="card  w-75 mx-auto bg-primary mb-2">
+                            <div class="number">${i+1}</div>
+                            <div class="card-body">
+                                <h5 class="card-title">${data[i].title}</h5>
+                                <p class="card-text">${data[i].body}</p>
+                            </div>
+                        </div>
+                        `
+                    }
+                }
+            container.innerHTML += divData;
+         
+            loaderView();
+        }
+        );           
+        }  
+
+        function loaderView() {
+            divLoader.style.display = "block" ;
+        }
+       
+   
+        
+    </script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
