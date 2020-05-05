@@ -1,0 +1,15 @@
+.green {
+    height: 400px;
+    padding: 0px;
+}
+.data {
+   display: none;
+}    
+.onHover:hover, li:hover {
+    color: black;
+    background: gray;
+}
+ul {
+    list-style: none;
+    padding: 0px;
+}

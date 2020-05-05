@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Page title -->
+ 
+    <title>Homework-20_02</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+    <header class="headerBackground">
+        <div class="container text-center text-white pt-5 pb-3">
+            <h1 class="pb-2">My Landing Page</h1>
+            <p class="pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus alias iure nesciunt perferendis recusandae.</p>
+            <button type="button" class="button" id="signUp">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container p-3">
+            <h2 class="pb-2">What is this landing page about?</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis tempore, minima quisquam corporis debitis omnis temporibus consequuntur dolores pariatur eius cupiditate, doloremque saepe asperiores aliquam inventore magni, earum ea adipisci.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum laborum inventore nisi, iusto consequuntur modi? Quae vel dignissimos eos dolorum recusandae ab officiis delectus quisquam, esse molestiae voluptate id ducimus.</p>
+            <h2 class="pb-2">Tell Me More</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis tempore, minima quisquam corporis debitis omnis temporibus consequuntur dolores pariatur eius cupiditate, doloremque saepe asperiores aliquam inventore magni, earum ea adipisci.</p>
+            <h2 class="pb-2">Benefits</h2>
+            <ul>
+                <li>Lifetime Access</li>
+                <li>30 Day Money Back</li>
+                <li>Tailored Customer Support</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolor. Consequatur qui voluptatem ad beatae velit molestiae adipisci ut enim tempore laboriosam, explicabo officiis iure itaque libero eos delectus aperiam nesciunt, in, corporis praesentium error nemo! Omnis iste earum dolorem sunt pariatur recusandae in aliquam ex molestias beatae repellendus voluptate illo, nihil harum itaque aliquid consectetur nulla aperiam natus possimus modi, nesciunt nemo, qui saepe? At culpa distinctio nisi amet reprehenderit, in ducimus, dolor explicabo quo aliquid ipsam porro qui iure nam aspernatur possimus tempora alias repellat voluptatum maxime quidem vitae recusandae, architecto itaque. Dolores totam debitis tempore voluptates velit.</p>
+        </div>
+       
+    </main>
+    <div class="modal" id="modal" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header headerBackground text-white">
+              <h5 class="modal-title ">Sign Up</h5>
+              <button type="button" class="close text-white" id="close" >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body ">
+                <p>Register with us to get offers, support and more.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="pass"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="pass">   
+                    </div>
+                    <div class="form-group">
+                        <label for="pass-confirm"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Confirm Password" name="pass-confirm">
+                    </div>
+                </form>
+                <button type="submit" class="button" id="submit" >Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script>   
+        var btnSignUp = document.querySelector("#signUp");
+        var btnSubmit = document.querySelector("#submit");
+        var btnClose = document.querySelector("#close");
+        
+        var visibleDiv = document.querySelector("#modal");
+        
+        btnSignUp.addEventListener("click", dataView);
+        btnSubmit.addEventListener("click", dataClose);
+        btnClose.addEventListener("click", dataClose);
+      
+        function dataView() {
+            visibleDiv.style.display='block';           
+        }
+
+        function dataClose() {
+            visibleDiv.style.display='none';           
+        }
+    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
