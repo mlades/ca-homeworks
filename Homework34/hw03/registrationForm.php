@@ -55,21 +55,7 @@ $browser->makeSelect();
 </form>
  
 <?php
- }else{
-  //Could include code to send data to database here.
-  //Retrieve user responses.
-  $name=$_POST['name'];
-  $username=$_POST['username'];
-  $email=$_POST['email'];
-  //The following variable has an altered name to avoid confusion.
-  $selBrowser=$_POST['browser'];
-  //Confirm responses to user.
-  echo "The following data has been saved for $name: <br />";
-  echo "Username: $username<br />";
-  echo "Email: $email<br />";
-  echo "Browser: $selBrowser<br />";
-
-}
+ }
  
 ?>
  </body>
