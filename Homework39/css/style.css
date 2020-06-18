@@ -1,0 +1,20 @@
+.header {
+    background-color: darkslateblue;
+}
+
+.one, .two {
+    width: 50%;
+    color: white;
+    margin: 15px;
+}
+.one {
+    float: left;
+    
+}
+
+.two {
+    float: right;
+    
+}
+
+
