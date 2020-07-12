@@ -1,14 +1,16 @@
-<div id="header" class="container">
-    <div id="logo">
-        <h1><a href="#">SimpleWork</a></h1>
-    </div>
-    <div id="menu">
-        <ul>
-            <li class="{{ Request::path() ==='/' ? 'current_page_item' : '' }}"><a href="/" accesskey="1" title="">Homepage</a></li>
-            <li class="{{ Request::path() ==='clients' ? 'current_page_item' : '' }}"><a href="#" accesskey="2" title="">Our Clients</a></li>
-            <li class="{{ Request::path() ==='about' ? 'current_page_item' : '' }}"><a href="/about" accesskey="3" title="">About Us</a></li>
-            <li class="{{ Request::path() ==='articles' ? 'current_page_item' : '' }}"><a href="/articles" accesskey="4" title="">Articles</a></li>
-            <li class="{{ Request::path() ==='contact' ? 'current_page_item' : '' }}"><a href="#" accesskey="5" title="">Contact Us</a></li>
-        </ul>
-    </div>
+<!-- Header -->
+<div id="header" class="skel-panels-fixed">
+	<div id="logo">
+		<h1><a href="/">Phase Shift</a></h1>
+		<span class="tag">by TEMPLATED</span>
+	</div>
+    <nav id="nav">
+		<ul>
+            <li class="{{ Request::path() ==='/' ? 'current_page_item' : '' }}"><a href="/">Homepage</a></li>
+			<li class="{{ Request::path() ==='left-sidebar' ? 'current_page_item' : '' }}"><a href="/left-sidebar">Left Sidebar</a></li>
+			<li class="{{ Request::path() ==='right-sidebar' ? 'current_page_item' : '' }}"><a href="/right-sidebar">Right Sidebar</a></li>
+			<li class="{{ Request::path() ==='no-sidebar' ? 'current_page_item' : '' }}"><a href="/no-sidebar">No Sidebar</a></li>
+		</ul>
+    </nav>
+			
 </div>
