@@ -1,0 +1,137 @@
+h3 {
+  text-transform: lowercase;
+  font-family: GoldenGate-Gothic, sans-serif;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+h3 {
+  font-size: 6rem;
+}
+
+
+.about-card {
+  position: relative;
+  padding-bottom: 70%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #161616;
+}
+
+
+.about-card--first {
+  margin-bottom: 8rem;
+}
+
+@media (min-width: 768px) {
+  .about-card--first {
+    margin-bottom: 15rem;
+  }
+}
+
+.about-card__inner {
+  height: 100%;
+  width: 100%;
+}
+
+.about-card__image {
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  max-width: 110%;
+  max-height: 110%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  .about-card__image {
+    max-width: 125%;
+    max-height: 125%;
+  }
+}
+
+.about-card__title {
+  position: absolute;
+  margin-bottom: 0;
+  left: 3.5rem;
+  bottom: 4rem;
+}
+
+.about-card__title span {
+  -webkit-text-fill-color: #fff;
+  position: relative;
+}
+
+.about-card__title span:after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.about-card__title span.text-white:after {
+  -webkit-text-stroke: 1px #007b9d !important;
+}
+
+@media (min-width: 768px) {
+  .about-card__title span.text-white:after {
+    -webkit-text-stroke: 2px #fff !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-card__title {
+    left: 8rem;
+    bottom: 8rem;
+  }
+}
+
+.about-card--black {
+  background-color: #161616;
+}
+
+.about-card--black .about-card__title span {
+  -webkit-text-fill-color: #007b9d;
+}
+
+.about-card--black .about-card__title span:after {
+  -webkit-text-stroke: 2px #007b9d;
+}
+
+a.about-card:hover img {
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+a.about-card:hover .about-card__btn {
+  background-color: #4a4a4a;
+}
+
+a.about-card:hover .about-card__btn:before {
+  background-color: #fff;
+}
+@media (max-width: 767.98px) {
+  .home .about-card--first {
+    margin-bottom: 8rem !important;
+  }
+
+  .about-card--black .about-card__title span:after {
+    -webkit-text-stroke: 1px #007b9d !important;
+  }
+  h3 {
+    font-size: 4rem !important;
+  }
+}
+

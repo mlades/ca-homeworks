@@ -1,0 +1,176 @@
+.head_image {
+  margin-top: 8vh;
+  background-size: cover;
+  background-position: center;
+}
+.partnerships_image {
+  background-image: url("../images/partnership.jpg");
+}
+.goals_image {
+  background-image: url("../images/goal.jpg");
+}
+.coaches_image {
+  background-image: url("../images/coaching.jpg");
+}
+.sportgoals_image {
+  background-image: url("../images/sport-goal.jpg");
+}
+.sportabilities_image {
+  background-image: url("../images/sport.jpg");
+}
+.about_image {
+  background-image: url("../images/about.jpg");
+}
+.l1,
+.l2,
+.l3 {
+  position: absolute;
+  background: 0 0;
+  width: 0;
+  height: 0;
+  color: #007b9d;
+}
+.l1 {
+  left: 0;
+  top: 0;
+  height: 50vh;
+  width: 1.6px;
+  animation: l1 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+.l2 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.6px;
+  animation: l2 0.4s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+.l3 {
+  right: 0;
+  bottom: 0;
+  height: 75vh;
+  width: 1.6px;
+  animation: l3 0.4s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+@-webkit-keyframes l1 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@-moz-keyframes l1 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@-o-keyframes l1 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@keyframes l1 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@-webkit-keyframes l2 {
+  0% {
+    width: 0;
+    background: #007b9d;
+  }
+  100% {
+    width: 100vw;
+    background: #007b9d;
+  }
+}
+@-moz-keyframes l2 {
+  0% {
+    width: 0;
+    background: #007b9d;
+  }
+  100% {
+    width: 100%;
+    background: #007b9d;
+  }
+}
+@-o-keyframes l2 {
+  0% {
+    width: 0;
+    background: #007b9d;
+  }
+  100% {
+    width: 100%;
+    background: #007b9d;
+  }
+}
+@keyframes l2 {
+  0% {
+    width: 0;
+    background: #007b9d;
+  }
+  100% {
+    width: 100%;
+    background: #007b9d;
+  }
+}
+@-webkit-keyframes l3 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@-moz-keyframes l3 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@-o-keyframes l3 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}
+@keyframes l3 {
+  0% {
+    height: 0;
+    background: #007b9d;
+  }
+  100% {
+    height: 50vh;
+    background: #007b9d;
+  }
+}

@@ -1,0 +1,28 @@
+.navbar-brand {
+  font-size: 3rem !important;
+}
+.navigation {
+  background-color: black;
+  padding: 10px;
+}
+.navbar-nav{
+    font-size: 1.2em;
+    margin-right: 100px;
+}
+.navbar-nav a:hover {
+  color: #007b9d !important;
+}
+
+.dropdown-menu {
+  font-size: 0.8em;
+  line-height: 30px;
+  background-color: black;  
+}
+
+.navbar-nav li:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav li:hover .dropdown-item{
+    color: #007b9d!important;
+}

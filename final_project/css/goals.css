@@ -1,0 +1,290 @@
+.section-field {
+  position: relative;
+
+  z-index: 0;
+}
+
+.section-field .btn:hover:before {
+  right: 54px;
+}
+
+.section-field:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  margin: auto;
+  background: -webkit-linear-gradient(left, #4a4a4a 36px, transparent 1%) 50%,
+    -webkit-linear-gradient(#4a4a4a 36px, transparent 1%) 50%,
+    hsla(0, 0%, 100%, 0.2);
+  background: -o-linear-gradient(left, #4a4a4a 36px, transparent 1%) 50%,
+    -o-linear-gradient(#4a4a4a 36px, transparent 1%) 50%, hsla(0, 0%, 100%, 0.2);
+  background: linear-gradient(90deg, #4a4a4a 36px, transparent 1%) 50%,
+    linear-gradient(#4a4a4a 36px, transparent 1%) 50%, hsla(0, 0%, 100%, 0.2);
+  background-size: 38px 38px;
+  background-position-x: center;
+  background-position-y: 38px;
+}
+
+.section-field .sfield {
+  margin: 0 auto;
+  display: block;
+}
+
+.section-field .playfield {
+  position: relative;
+  margin: 20px 0 40px;
+}
+
+.section-field .playfield path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.section-field .playfield.start-animation path {
+  -webkit-animation: hp_showplayfield 2.5s linear forwards;
+  -o-animation: hp_showplayfield 2.5s linear forwards;
+  animation: hp_showplayfield 2.5s linear forwards;
+}
+
+.section-field .playfield .player-list .player,
+.section-field .playfield .goals-list .goals {
+  font-size: 1.6rem;
+  line-height: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: absolute;
+}
+
+.goals {
+  padding-left: 50px;
+  font-size: 1.6rem;
+}
+
+.section-field .playfield .player-list .player:after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 2px solid #007b9d;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: -28px;
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all linear 0.1s;
+  transition: all 0.1s linear;
+  pointer-events: none;
+  -webkit-animation: pulse 2s infinite;
+  -o-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+.goals-list .goals:after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 2px solid #007b9d;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  left: -28px;
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all linear 0.1s;
+  transition: all 0.1s linear;
+  pointer-events: none;
+  -webkit-animation: pulse 2s infinite;
+  -o-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 hsla(46, 49%, 62%, 0.7);
+    box-shadow: 0 0 0 0 hsla(46, 49%, 62%, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0 0 0 5px hsla(46, 49%, 62%, 0);
+    box-shadow: 0 0 0 5px hsla(46, 49%, 62%, 0);
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 hsla(46, 49%, 62%, 0);
+    box-shadow: 0 0 0 0 hsla(46, 49%, 62%, 0);
+  }
+}
+
+.section-field .playfield .player-list .player span {
+  font-size: 1.6rem;
+  line-height: 16px;
+  font-family: Arial, sans-serif;
+  display: block;
+}
+
+.section-field .btn--wrapper {
+  margin-top: -214px;
+}
+
+@-webkit-keyframes hp_showplayfield {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-o-keyframes hp_showplayfield {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hp_showplayfield {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .goals {
+    padding-left: 6%;
+  }
+  .playfield {
+    width: 436px;
+    height: 310px;
+  }
+  .section-field:after {
+    background-position-x: 18px;
+  }
+  .section-field .sfield  {
+    visibility: hidden;
+  }
+  
+  .section-field .playfield .player-list .player {
+    left: 6%;
+    position: relative;
+  }
+  .section-field .playfield .player-list .player.p2 {
+    left:6%;
+    top: 10px;
+  }
+  .section-field .playfield .player-list .player.p3 {
+    left: 6%;
+    bottom: -30px;
+  }
+  .section-field .playfield .player-list .player.p4 {
+    left: 6%;
+    bottom: -60px;
+  }
+  .section-field .playfield .player-list .player.p5 {
+    left: 6%;
+    bottom: -90px;
+  }
+}
+
+.section-field .player-list {
+  position: relative;
+  z-index: 9;
+}
+
+@media (min-width: 576px) {
+  .goals {
+    padding-left: 6%;
+  }
+  .section-field .player-list {
+    position: static;
+
+  }
+  .section-field .sfield {
+    width: 100%;
+  }
+  .section-field .playfield .player-list .player.p {
+    left: 6%;
+    bottom: 230px;
+  }
+  .section-field .playfield .player-list .player.p2 {
+    left: 6%;
+    bottom: 180px;
+  }
+  .section-field .playfield .player-list .player.p3 {
+    left: 6%;
+    bottom: 150px;
+  }
+  .section-field .playfield .player-list .player.p4 {
+    left: 6%;
+    bottom: 70px;
+  }
+  .section-field .playfield .player-list .player.p5 {
+    left: 6%;
+    bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-field .sfield {
+    width: 100%;
+  }
+  .section-field .playfield .player-list .player.p {
+    left: 15%;
+    bottom: 330px;
+  }
+  .section-field .playfield .player-list .player.p2 {
+    left: 10%;
+    bottom: 250px;
+  }
+  .section-field .playfield .player-list .player.p3 {
+    left: 5%;
+    bottom: 170px;
+  }
+  .section-field .playfield .player-list .player.p4 {
+    left: 10%;
+    bottom: 90px;
+  }
+  .section-field .playfield .player-list .player.p5 {
+    left: 15%;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-field .playfield .player-list .player.p {
+    left: 15%;
+    bottom: 480px;
+  }
+  .section-field .playfield .player-list .player.p2 {
+    left: 10%;
+    bottom: 404px;
+  }
+  .section-field .playfield .player-list .player.p3 {
+    left: 5%;
+    bottom: 303px;
+  }
+  .section-field .playfield .player-list .player.p4 {
+    left: 10%;
+    bottom: 202px;
+  }
+  .section-field .playfield .player-list .player.p5 {
+    left: 15%;
+    bottom: 101px;
+  }
+}
